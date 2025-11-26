@@ -19,8 +19,18 @@ export default [
         sourceType: 'module',
       },
       globals: {
+        // Browser globals
         fetch: 'readonly',
         console: 'readonly',
+        Response: 'readonly',
+        AbortSignal: 'readonly',
+        AbortController: 'readonly',
+        // Node globals
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        global: 'readonly',
       },
     },
     plugins: {
@@ -62,6 +72,13 @@ export default [
       'prefer-const': 'error',
       'no-var': 'error',
       'no-unused-vars': 'off', // Use TypeScript's no-unused-vars instead
+    },
+  },
+  {
+    files: ['**/*.spec.ts', '**/*.test.ts', '**/__tests__/**/*.ts'],
+    rules: {
+      '@typescript-eslint/no-explicit-any': 'off',
+      'no-undef': 'off',
     },
   },
   {
