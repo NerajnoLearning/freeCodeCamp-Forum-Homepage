@@ -57,7 +57,7 @@ export const toGroupId = (id: number): GroupId => id as GroupId
  * @returns True if the value is a valid TrustLevel
  */
 export const isTrustLevel = (value: unknown): value is TrustLevel => {
-  return typeof value === 'number' && value >= 0 && value <= 4
+  return typeof value === 'number' && Number.isInteger(value) && value >= 0 && value <= 4
 }
 
 /**
