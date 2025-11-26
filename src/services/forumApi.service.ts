@@ -260,9 +260,9 @@ export class ForumApiService {
           'Content-Type': 'application/json',
         },
       })
-
-      // Clear timeout and active request
       clearTimeout(timeoutId)
+
+      // Clear active request
       this.activeRequests.delete(requestKey)
 
       // Check for HTTP errors
