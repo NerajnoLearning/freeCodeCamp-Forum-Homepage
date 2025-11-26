@@ -88,7 +88,20 @@ export const isForumTopic = (obj: unknown): obj is ForumTopic => {
     typeof topic.id === 'number' &&
     typeof topic.title === 'string' &&
     typeof topic.slug === 'string' &&
-    Array.isArray(topic.posters)
+    Array.isArray(topic.posters) &&
+    typeof topic.created_at === 'string' &&
+    typeof topic.last_posted_at === 'string' &&
+    typeof topic.bumped === 'boolean' &&
+    typeof topic.bumped_at === 'string' &&
+    typeof topic.archetype === 'string' &&
+    typeof topic.unseen === 'boolean' &&
+    typeof topic.visible === 'boolean' &&
+    typeof topic.closed === 'boolean' &&
+    typeof topic.archived === 'boolean' &&
+    typeof topic.like_count === 'number' &&
+    typeof topic.has_summary === 'boolean' &&
+    typeof topic.last_poster_username === 'string' &&
+    typeof topic.pinned_globally === 'boolean'
   )
 }
 
