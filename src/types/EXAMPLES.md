@@ -174,7 +174,7 @@ export function useTopicFilters(topics: Ref<ForumTopic[]>) {
       last_posted_at: compareTopicsByLastPosted,
       created_at: compareTopicsByCreated,
       views: compareTopicsByViews,
-      posts_count: compareTopicsByReplies,
+      posts_count: (a: ForumTopic, b: ForumTopic) => b.posts_count - a.posts_count,
       like_count: (a: ForumTopic, b: ForumTopic) => b.like_count - a.like_count,
     }[sortBy.value]
 
