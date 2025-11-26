@@ -298,6 +298,6 @@ export const searchTopics = (topics: ForumTopic[], query: string): ForumTopic[] 
   return topics.filter(
     (topic) =>
       topic.title.toLowerCase().includes(lowerQuery) ||
-      topic.fancy_title?.toLowerCase().includes(lowerQuery)
+      topic.fancy_title?.toLowerCase()?.includes(lowerQuery)
   )
 }
