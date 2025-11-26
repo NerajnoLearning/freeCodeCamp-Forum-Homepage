@@ -659,7 +659,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**Nerajno Odhiambo**
+**Nerajno **
 - Website: [developingdvlpr.com](https://developingdvlpr.com)
 - GitHub: [@NerajnoLearning](https://github.com/NerajnoLearning)
 - Twitter: [@nerajno](https://twitter.com/nerajno)
