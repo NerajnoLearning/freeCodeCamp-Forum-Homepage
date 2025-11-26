@@ -117,7 +117,8 @@ export const isForumCategory = (obj: unknown): obj is ForumCategory => {
     typeof category.id === 'number' &&
     typeof category.name === 'string' &&
     typeof category.slug === 'string' &&
-    typeof category.color === 'string'
+    typeof category.color === 'string' &&
+    typeof category.text_color === 'string'
   )
 }
 
